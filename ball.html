@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        section{
+            position: absolute;
+        }
+        .cane{
+            position: absolute;
+            /* height: 140px; */
+            width: 180px;
+            border-radius: 25px;
+            transform: skewX(30deg);
+            top: 10px;
+            left: 60px;
+            box-sizing: border-box;
+            animation-duration: 5.2s;
+            animation-name: cane;
+            animation-iteration-count: 1;
+            
+        }
+        
+        @keyframes cane {
+            from{
+                height:0px;
+                background-color: black;
+            }
+            to{
+                height: 140px;
+                background-image: linear-gradient(to top, rgb(35, 31, 31),rgb(83, 77, 77),rgb(123, 119, 119),black);
+                box-shadow: 12px 8px 18px black ;
+                
+            }
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: rgba(235, 93, 37, 0);
+            position: absolute;
+            animation-name: ball;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            transform: translate(100px,34px);
+            /* animation-timing-function:ease; */
+            /* animation-direction: alternate; */
+
+        
+        }
+        @keyframes ball{
+            0%{ background-color:rgb(235, 37, 37);
+                transform: translate();
+            }
+            12.5%{
+                background-color: rgb(255, 0, 0);
+                transform: translate(300px,605px);
+            }
+            25%{
+                background-color: yellow;
+                transform: translate(600px,0px);
+            }
+            37.5%{
+                background-color: blue;
+                transform: translate(900px,605px);
+            }
+            50%{
+                background-color: green;
+                transform: translate(1200px,0px);
+            }
+            62.5%{
+                background-color: rgb(32, 236, 222);
+                transform: translate(1350px,605px)
+            }
+            75%{
+                background-color: black;
+                transform: translate(1400px,535px)
+            }
+            87.5%{
+                background-color:darkviolet;
+                transform: translate(34px,100px)
+            }
+            100%{
+                background-color: orange;
+                transform: translate()
+            }
+        }
+        .base0{
+            box-sizing: border-box;
+            height: 230px;
+            width: 230px;
+            background-color: rgba(41, 38, 38, 0);
+            border-radius: 10px;
+            border-left: 35px solid  rgb(41, 38, 38);
+            border-top: 35px solid  rgb(41, 38, 38);
+            position: absolute;
+            transform: translate() ;
+        }
+        .base1{
+            height: 30px;
+            width: 300px;
+            background-color: rgb(41, 38, 38);
+            border-radius: 10px;
+            position: absolute;
+            transform: translate(200px,685px) ;
+        }
+        .base2{
+            height: 30px;
+            width: 300px;
+            background-color: rgb(41, 38, 38);
+            border-radius: 10px;
+            position: absolute;
+            transform: translate(500px) ;
+        }.base3{
+            height: 30px;
+            width: 300px;
+            background-color: rgb(41, 38, 38);
+            border-radius: 10px;
+            position: absolute;
+            transform: translate(800px,685px) ;
+        }.base4{
+            height: 30px;
+            width: 300px;
+            background-color: rgb(41, 38, 38);
+            border-radius: 10px;
+            position: absolute;
+            transform: translate(1100px) ;
+        }
+        .base5{
+            box-sizing: border-box;
+            height: 230px;
+            width: 230px;
+            background-color: rgba(41, 38, 38, 0);
+            border-radius: 10px;
+            border-right: 35px solid  rgb(41, 38, 38);
+            border-bottom: 35px solid  rgb(41, 38, 38);
+            position: absolute;
+            transform: translate(1300px,485px) ;
+        }
+        #demo{
+            display: none;
+        }
+        button{
+            box-shadow: 1px 1px 3px #000;
+            width: 50px;
+            padding: 5px;
+            top: 40%;
+            position: absolute;
+            border-radius: 10px;
+            /* height: 10px;
+            width: 100px; */
+            background-color: yellow;
+            color: rgb(255, 0, 0);
+        }
+        .b2{
+            left: 80px;
+        }
+    </style>
+</head>
+<body >
+    <button onclick="document.getElementById('demo').style.display='block' ">Start</button>
+    <button onclick="document.getElementById('demo').style.display='none' " class="b2">Stop</button>
+    
+    <section id="demo">
+    <div class="ball"></div>
+    <div class="cane"></div>
+    <div class="base0"></div>
+    <div class="base1"></div>
+    <div class="base2"></div>
+    <div class="base3"></div>
+    <div class="base4"></div>
+    <div class="base5"></div>
+</section>
+</body>
+</html>
+
+
+
